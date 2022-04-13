@@ -9,6 +9,7 @@ int function(int n)
     int temp;
     float sum=0;
     temp =n;
+    int remainder;
     while(temp)
     {
         count++;
@@ -16,9 +17,12 @@ int function(int n)
     }
     while(n)
     {
-        sum = sum+(n%10)*pow(10,count-i);
-        n=n/10;
-        i++;
+        //sum = sum+(n%10)*pow(10,count-i);
+        //n=n/10;
+        //i++;
+        remainder = n%10;
+        sum = sum*10+remainder;
+        n/=10;
     }
     return sum;
 }
